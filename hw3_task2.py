@@ -1,18 +1,18 @@
-print('Hello!')
-nickname = input('Введите свой никнейм')
-if nickname == 'admin':
+print('Hello!')                         #Приветствует пользователя в произвольном виде
+nickname = input('Введите свой никнейм') #Просит ввести никнейм
+if nickname == 'admin':                  #Если никнейм содержит admin, выводит: "Привет, повелитель!", не прекращая работу
     print('Привет, повелитель!')
-gender = input('Введите свой пол')
-age = int(input('Введите свой возраст'))
-if nickname == 'Женя':
-    print('Советую Вам посмотреть "TENET"', sep='', end='\n')
-elif ((10 < age < 14 and gender == 'М') or (age > 30 and gender == 'М')):
+gender = input('Введите свой пол')      #Просит ввести свой пол
+age = int(input('Введите свой возраст')) #Просит ввести возраст
+if nickname == 'Женя':                     #Если никнейм 'Женя
+    print('Советую Вам посмотреть "TENET"', sep='', end='\n') 
+elif ((10 < age < 14 and gender == 'М') or (age > 30 and gender == 'М')): #Если возраст больше 10 и меньше 14 и пол М или больше 30 и пол М
     print('Советую Вам посмотреть "StarWars" или "Мандалорец"', sep='', end='\n')
-elif 22 < age < 32 and gender == 'Ж':
+elif 22 < age < 32 and gender == 'Ж':       #Если возраст больше 22 и меньше 32 и пол Ж
     print('Советую Вам посмотреть "Трансформеры"', sep='', end='\n')
-elif age < 16 and gender == 'Ж':
+elif age < 16 and gender == 'Ж':            #Если возраст меньше 16 и пол Ж
     print('Советую Вам посмотреть "Инсургент"', sep='', end='\n')
-elif age > 11 and gender == 'М':
+elif age > 11 and gender == 'М':            #Если возраст до 11 и пол М
     print('Советую Вам посмотреть "TMNT"', sep='', end='\n')
-if nickname == 'Guido':
+if nickname == 'Guido':                     #Если никнейм Guido: Кроме рекомендации, выводит "Огромное спасибо!"
     print('Огромное спасибо!', sep='', end='\n')
