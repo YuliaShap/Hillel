@@ -6,8 +6,3 @@ dict_5 = {9: 90, 10: 100}
 # решение с помощью распаковки
 merged_dict1 = {**dict_1, **dict_2, **dict_3, **dict_4, **dict_5}
 print(merged_dict1)
-
-# решение с помощью цикла и метода items
-merge_dict2 = {k: v for d in (dict_1, dict_2, dict_3, dict_4, dict_5) for k, v in d.items()}
-print(merge_dict2)
-
