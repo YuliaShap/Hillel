@@ -9,10 +9,13 @@ for diction in list_with_dict:  # проходимся циклом по сло�
 print(res)  # принтим результат
 
 # L = [{"V": S001"}, {"V": "S002"}, {"VI": "S005"}, {"V":"S009"},{"VIII":"S007"}]
-res = []
+res_key = []
+res_val = []
 
 for diction in list_with_dict:
     for k, v in diction.items():
-        if v not in res:
-            res.append(k), res.append(v)
-print(res)
+        if v not in res_val:
+            res_key.append(k), res_val.append(v)
+new_list = [{k: v} for k, v in zip(res_key, res_val)]
+
+print(new_list)
