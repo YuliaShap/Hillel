@@ -20,5 +20,6 @@ def foo():
     return foo2
 
 
+print(a)
 foo()
 
