@@ -2,7 +2,6 @@ def cache_decorator(func, *args):
     cache = {}
 
     def decorated_function(*args):
-        print('-' * 50)
         print('args =', args)
         print('cache =', cache)
         if cache.get(args):
