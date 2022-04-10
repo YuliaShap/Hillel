@@ -1,24 +1,19 @@
 # coding=utf-8
-def devis(a, b):  # функция деления
-    assert b != 0
-    print('на ноль делить нельзя')
-    assert a.isdigit() == True
-    print('вы должны ввести число')
-    assert b.isdigit() == True
-    print('вы должны ввести число')
+def devis(a, b):  
+    assert b != 0, 'Нельзя делить на 0' 
     return a / b
 
 
-def my_new_reduce(function, iterable, start=None):  # самописный reduce
-    it = iter(iterable)  # создаем итератор
-    if start is None:  #
-        value = next(it)  #
+def my_new_reduce(function, iterable, start=None):  
+    it = iter(iterable) 
+    if start is None:  
+        value = next(it)  
     else:
-        value = start  #
-    for element in it:  #
-        value = function(value, element)  #
-    return value  #
+        value = start  
+    for element in it:  
+        value = function(value, element)  
+    return value  
 
 
-x = my_new_reduce(devis, [100, 1, 'hg', 1])  #
-print(x)  #
+x = my_new_reduce(devis, [110, 1, 10, 4])  
+print(x)  
