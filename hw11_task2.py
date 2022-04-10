@@ -1,15 +1,21 @@
-"""Функция reduce принимает 2 аргумента: функцию и последовательность.
-reduce() последовательно применяет функцию-аргумент к элементам списка, возвращает единичное значение."""
+# coding=utf-8
+def devis(a, b):  # функция деления
+    return a / b
 
-from functools import reduce  # вызываем функцию reduce из модуля functools
 
-items = [1, 24, 17, 14, 9, 32, 2]  # дан список из чисел
+def my_new_reduce(function, iterable, start=None):  # самописный reduce
+    it = iter(iterable)  # создаем итератор
+    if start is None:  #
+        value = next(it)  #
+    else:
+        value = start  #
+    for element in it:  #
+        value = function(value, element)  #
+    return value  #
 
-all_max = reduce(lambda a, b: a if (a > b) else b,
-                 items)  # с помощью reduce и лямбда-функции находим максимальное число из списка
 
-print(all_max)  # принтим максимальное число
-
+x = my_new_reduce(devis, [100, 1, 1, 1])  #
+print(x)  #
 
 #################################################################
 def my_reduce(function, iterable, initializer=None):
@@ -21,17 +27,3 @@ def my_reduce(function, iterable, initializer=None):
     for element in it:
         value = function(value, element)
     return value
-
-
-
-
-# def my_new_reduce(function, items, value=0):
-#     it_items = iter(items)
-#     for item in it_items:
-#         if item[0] > item[1]:
-#             value = item[0]
-#         else:
-#             value = item[1]
-#     return value
-
-
