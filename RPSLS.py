@@ -2,8 +2,8 @@ import random
 
 
 def game():  # функция игры
-    x = ['rock', 'paper', 'scissors', 'lizard', 'spock']  # список с элементами игры, которые можно выбрать
-    a = input('Your choice: rock paper scissors lizard spock?')  # просим пользователя ввести элемент
+    x: list = ['rock', 'paper', 'scissors', 'lizard', 'spock']  # список с элементами игры, которые можно выбрать
+    a: str = input('Your choice: rock paper scissors lizard spock?')  # просим пользователя ввести элемент
     if a in x:  # проверяем ести ли этот элемент в списке
         pass  # если есть, идем дальше
     while a not in x:  # пока пользователь не введет правильное значение, будем его задалбывать
