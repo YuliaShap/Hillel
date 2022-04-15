@@ -13,6 +13,8 @@ def game():  # функция игры
             pass  # идем дальше
 
     b = random.choice(x)  # рандомом выбираем значение-аппонент
+    print(f'Player: {a}')
+    print(f'Computer: {b}')
     # здесь блок логики, если пользователь ввел rock
     if a == 'rock':
         if b == 'rock':
